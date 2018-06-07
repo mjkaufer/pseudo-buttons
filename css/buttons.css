@@ -23,6 +23,10 @@ body {
 	z-index: -1;
 }
 
+.pseudo-button:hover {
+	color: black;
+}
+
 /** Simple slide in from left */
 #button-1::before {
 	left: -100%;
@@ -30,10 +34,6 @@ body {
 	width: 100%;
 	height: 100%;
 	background-color: white;
-}
-
-#button-1:hover {
-	color: black;
 }
 
 #button-1:hover::before {
@@ -55,10 +55,6 @@ body {
 	width: 100%;
 	height: 100%;
 	background-color: white;
-}
-
-#button-2:hover {
-	color: black;
 }
 
 #button-2:hover::before, #button-2:hover::after {
@@ -84,14 +80,25 @@ body {
 	transform: rotate(45deg);
 }
 
-#button-3:hover {
-	color: black;
-}
-
 #button-3:hover::after {
 	left: 0%;
 }
 
 #button-3:hover::before {
 	left: -50%;
+}
+
+/** Expand outwards */
+#button-4::before {
+	width: 100%;
+	height: 100%;
+	transform: scale(0);
+	transform-origin: 100%, 100%;
+	background-color: white;
+	left: 0;
+	top: 0;
+}
+
+#button-4:hover::before {
+	transform: scale(1);
 }
