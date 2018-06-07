@@ -1,0 +1,97 @@
+body {
+	background-color: #333;
+	color: white;
+}
+
+.pseudo-button {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	transition: 0.2s all;
+	border: solid white 2px;
+	padding: 1em;
+	color: white;
+	text-decoration: none;
+	margin: 1em;
+	height: 1em;
+}
+
+.pseudo-button::before, .pseudo-button::after {
+	content: "";
+	position: absolute;
+	transition: 0.2s all;
+	z-index: -1;
+}
+
+/** Simple slide in from left */
+#button-1::before {
+	left: -100%;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+}
+
+#button-1:hover {
+	color: black;
+}
+
+#button-1:hover::before {
+	left: 0%;
+}
+
+/** Slide in from both sides */
+#button-2::before {
+	left: -100%;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+}
+
+#button-2::after {
+	left: 100%;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+}
+
+#button-2:hover {
+	color: black;
+}
+
+#button-2:hover::before, #button-2:hover::after {
+	left: 0%;
+}
+
+/** Diagonal arrow */
+#button-3::before {
+	left: -140%;
+	top: 0;
+	width: 150%;
+	height: 200%;
+	background-color: white;
+	transform: rotate(45deg);
+}
+
+#button-3::after {
+	left: 90%;
+	top: -100%;
+	width: 150%;
+	height: 200%;
+	background-color: white;
+	transform: rotate(45deg);
+}
+
+#button-3:hover {
+	color: black;
+}
+
+#button-3:hover::after {
+	left: 0%;
+}
+
+#button-3:hover::before {
+	left: -50%;
+}
