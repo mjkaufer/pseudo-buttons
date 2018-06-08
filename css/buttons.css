@@ -93,7 +93,6 @@ body {
 	width: 100%;
 	height: 100%;
 	transform: scale(0);
-	transform-origin: 100%, 100%;
 	background-color: white;
 	left: 0;
 	top: 0;
@@ -101,4 +100,18 @@ body {
 
 #button-4:hover::before {
 	transform: scale(1);
+}
+
+/** Simple slide in from left with circle */
+#button-5::before {
+	left: -200%;
+	top: 0;
+	width: 200%;
+	height: 100%;
+	border-radius: 0% 50% 50% 00%;
+	background-color: white;
+}
+
+#button-5:hover::before {
+	left: 0%;
 }
